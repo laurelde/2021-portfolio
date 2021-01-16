@@ -31,9 +31,7 @@ class Landing extends Component {
       <div id="landing">
         <div id="banner">
           <div id="cover"></div>
-          <h1>
-            <div id="cover"></div>LAUREL DENTINGER
-          </h1>
+          <h1>LAUREL DENTINGER</h1>
           <h2>
             <Typewriter
               options={{
