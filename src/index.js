@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./index.css";
@@ -13,15 +13,15 @@ import ClassifyReport from "./Components/reports/classifyReport";
 import HDCReport from "./Components/reports/hdcReport";
 
 const routing = (
-  <BrowserRouter>
-    <Route exact path="/" component={Landing} />
+  <HashRouter basename={process.env.PUBLIC_URL}>
+    <Route exact path="#" component={Landing} />
     <Route exact path="/projects" component={Projects} />
     <Route path="/projects/classify-app" component={ClassifyReport} />
     <Route path="/projects/hdc-app" component={HDCReport} />
     <Route path="/projects/cellport" component={CellPortReport} />
     <Route path="/about" component={About} />
     <Route path="/resume" component={Resume} />
-  </BrowserRouter>
+  </HashRouter>
 );
 
 ReactDOM.render(routing, document.getElementById("root"));
