@@ -13,7 +13,7 @@ import ClassifyReport from "./Components/reports/classifyReport";
 import HDCReport from "./Components/reports/hdcReport";
 
 const routing = (
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter>
     <Route exact path="/" component={Landing} />
     <Route exact path="/projects" component={Projects} />
     <Route path="/projects/classify-app" component={ClassifyReport} />
